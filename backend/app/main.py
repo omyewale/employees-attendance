@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Depends
 from sqlalchemy.orm import Session
 from .database import Base, engine, SessionLocal
-from . import schemas, crud
+from . import schemas, crud , models
 from fastapi.middleware.cors import CORSMiddleware
 
 Base.metadata.create_all(bind=engine)
@@ -21,6 +21,10 @@ def get_db():
         yield db
     finally:
         db.close()
+
+@app.get("/")
+def root():
+    return {"message": "API is running"}
 
 
 @app.post("/employees")
