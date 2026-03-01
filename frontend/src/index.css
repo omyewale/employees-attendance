@@ -323,7 +323,10 @@ tbody td {
 td .rounded-full,
 td [class*="rounded-full"] {
   height: 36px !important;
+  width: 36px !important;
   min-width: 36px;
+  border-radius: 50% !important;
+  background: var(--red) !important;
   color: var(--white) !important;
   display: flex !important;
   align-items: center !important;
@@ -539,4 +542,77 @@ button .animate-spin {
 [class*="icon"] svg {
   width: 20px !important;
   height: 20px !important;
+}
+
+/* ── NAVBAR BRAND BUTTON ─────────────────────────────── */
+nav a,
+header a,
+.navbar a,
+a[href="/"],
+a[href="/attendance"] {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Style attendance link as a pill button */
+nav a[href="/attendance"],
+header a[href="/attendance"],
+a[href="/attendance"] {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white) !important;
+  background: var(--red) !important;
+  border: 1px solid var(--red) !important;
+  padding: 0.45rem 1.1rem !important;
+  border-radius: 3px !important;
+  transition: all 0.18s ease !important;
+  box-shadow: 0 2px 10px var(--red-glow);
+  text-decoration: none !important;
+}
+
+nav a[href="/attendance"]:hover,
+header a[href="/attendance"]:hover,
+a[href="/attendance"]:hover {
+  background: var(--red-dark) !important;
+  border-color: var(--red-dark) !important;
+  box-shadow: 0 4px 16px rgba(232,25,26,0.35) !important;
+  transform: translateY(-1px);
+  color: var(--white) !important;
+}
+
+/* Style home/brand link separately — keeps it as logo text */
+nav a[href="/"],
+header a[href="/"],
+a[href="/"] {
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: 1.4rem !important;
+  letter-spacing: 0.08em;
+  color: var(--red) !important;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+nav a[href="/"]:hover {
+  color: var(--white) !important;
+  background: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Navbar layout — space brand and button apart */
+nav, header nav,
+[class*="navbar"],
+[class*="nav-"] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 1rem 0 1.5rem !important;
+  border-bottom: 1px solid var(--border) !important;
+  margin-bottom: 2rem !important;
 }
