@@ -616,3 +616,56 @@ nav, header nav,
   border-bottom: 1px solid var(--border) !important;
   margin-bottom: 2rem !important;
 }
+
+/* ── APP NAVBAR FIX (targets actual App.jsx structure) ── */
+nav.bg-gray-800 {
+  background: var(--surface-2) !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding: 0.9rem 1.5rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 1rem !important;
+}
+
+/* Brand link — "Employees" */
+nav.bg-gray-800 a:first-child {
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: 1.4rem !important;
+  letter-spacing: 0.08em !important;
+  color: var(--red) !important;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+nav.bg-gray-800 a:first-child:hover {
+  color: var(--white) !important;
+}
+
+/* Attendance button — "Attendance" */
+nav.bg-gray-800 a:last-child {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: var(--white) !important;
+  background: var(--red) !important;
+  border: 1px solid var(--red) !important;
+  padding: 0.45rem 1.2rem !important;
+  border-radius: 3px !important;
+  text-decoration: none !important;
+  transition: all 0.18s ease !important;
+  box-shadow: 0 2px 10px var(--red-glow) !important;
+}
+
+nav.bg-gray-800 a:last-child:hover {
+  background: var(--red-dark) !important;
+  border-color: var(--red-dark) !important;
+  box-shadow: 0 4px 16px rgba(232,25,26,0.35) !important;
+  transform: translateY(-1px) !important;
+  color: var(--white) !important;
+}
